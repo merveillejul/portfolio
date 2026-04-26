@@ -1639,60 +1639,10 @@ body {
   transform: rotate(20deg);
 }
 
-/* ============================================================
-   BOUTON RETOUR EN HAUT
-============================================================ */
-.back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 46px;
-  height: 46px;
-  background: var(--indigo);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(79,70,229,0.4);
-  opacity: 0;
-  transform: translateY(16px);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
-  z-index: 998;
-}
-
-.back-to-top.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.back-to-top:hover {
-  background: var(--indigo-dark);
-  transform: translateY(-3px);
-}
-
-/* Décaler le toast pour ne pas chevaucher le bouton retour haut */
-#toast {
-  bottom: 5.5rem;
-}
-
-/* ============================================================
-   LABEL FACULTATIF dans le formulaire
-============================================================ */
-.label-optional {
-  font-size: 0.72rem;
-  font-weight: 400;
-  color: var(--ink-muted);
-  margin-left: 0.3rem;
-}
 
 /* ============================================================
    MODE SOMBRE — Dark Mode
+   Compatible Safari iOS / macOS
 ============================================================ */
 body.dark {
   --ink:        #f1f5f9;
@@ -1728,12 +1678,13 @@ body.dark .site-footer-bottom {
   background: #070a0f;
 }
 
-/* Transition douce */
-body { transition: background 0.3s ease, color 0.3s ease; }
-*, *::before, *::after {
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+/* Transitions globales douces */
+body { transition: background-color 0.3s ease, color 0.3s ease; }
+*:not(.skill-fill):not(.scroll-line):not(.pulse-dot) {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
-.skill-fill, .scroll-line, .pulse-dot { transition: none !important; }
 
 /* ============================================================
    NAV RIGHT
@@ -1745,10 +1696,12 @@ body { transition: background 0.3s ease, color 0.3s ease; }
 }
 
 /* ============================================================
-   BOUTON THEME TOGGLE — style pill
+   BOUTON THEME TOGGLE — pill sobre
 ============================================================ */
 .theme-toggle {
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
   gap: 0.45rem;
   padding: 0.4rem 0.9rem;
@@ -1761,15 +1714,17 @@ body { transition: background 0.3s ease, color 0.3s ease; }
   font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
-  transition: background var(--trans), border-color var(--trans), color var(--trans);
+  -webkit-appearance: none;
+  appearance: none;
 }
-.theme-toggle i { font-size: 0.85rem; transition: transform 0.4s ease; }
+.theme-toggle i {
+  font-size: 0.85rem;
+}
 .theme-toggle:hover {
   background: var(--indigo-light);
   border-color: var(--indigo);
   color: var(--indigo);
 }
-.theme-toggle:hover i { transform: rotate(25deg); }
 
 @media (max-width: 1100px) {
   #theme-label { display: none; }
@@ -1777,7 +1732,9 @@ body { transition: background 0.3s ease, color 0.3s ease; }
 }
 
 /* ============================================================
-   BOUTON RETOUR EN HAUT — carré arrondi sobre
+   BOUTON RETOUR EN HAUT
+   Fix Safari iOS : on évite transform sur position:fixed
+   On utilise opacity + visibility à la place
 ============================================================ */
 .back-to-top {
   position: fixed;
@@ -1788,29 +1745,87 @@ body { transition: background 0.3s ease, color 0.3s ease; }
   background: var(--bg-card);
   color: var(--indigo);
   border: 1.5px solid var(--border);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   font-size: 0.9rem;
   cursor: pointer;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  /* Safari fix : pas de transform ici, on utilise opacity + visibility */
   opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease,
-              background var(--trans), color var(--trans), border-color var(--trans);
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease,
+                      background-color 0.2s ease, color 0.2s ease,
+                      border-color 0.2s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease,
+              background-color 0.2s ease, color 0.2s ease,
+              border-color 0.2s ease;
   z-index: 997;
+  /* Safari : forcer le rendu du bouton fixe */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
+
 .back-to-top.visible {
   opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  visibility: visible;
 }
+
 .back-to-top:hover {
   background: var(--indigo);
   color: #fff;
   border-color: var(--indigo);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(79,70,229,0.35);
+}
+
+/* ============================================================
+   ANIMATIONS AU SCROLL
+============================================================ */
+.will-animate {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.will-animate.is-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.projects-grid .project-card.will-animate:nth-child(1) { transition-delay: 0.00s; }
+.projects-grid .project-card.will-animate:nth-child(2) { transition-delay: 0.07s; }
+.projects-grid .project-card.will-animate:nth-child(3) { transition-delay: 0.14s; }
+.projects-grid .project-card.will-animate:nth-child(4) { transition-delay: 0.21s; }
+.projects-grid .project-card.will-animate:nth-child(5) { transition-delay: 0.28s; }
+.projects-grid .project-card.will-animate:nth-child(6) { transition-delay: 0.35s; }
+
+.veille-grid .veille-card.will-animate:nth-child(1) { transition-delay: 0.00s; }
+.veille-grid .veille-card.will-animate:nth-child(2) { transition-delay: 0.07s; }
+.veille-grid .veille-card.will-animate:nth-child(3) { transition-delay: 0.14s; }
+.veille-grid .veille-card.will-animate:nth-child(4) { transition-delay: 0.21s; }
+.veille-grid .veille-card.will-animate:nth-child(5) { transition-delay: 0.28s; }
+.veille-grid .veille-card.will-animate:nth-child(6) { transition-delay: 0.35s; }
+.veille-grid .veille-card.will-animate:nth-child(7) { transition-delay: 0.42s; }
+.veille-grid .veille-card.will-animate:nth-child(8) { transition-delay: 0.49s; }
+
+/* ============================================================
+   SKILL CARDS — Animation filtre
+============================================================ */
+.skill-card {
+  -webkit-animation: skillAppear 0.4s ease both;
+  animation: skillAppear 0.4s ease both;
+}
+
+@-webkit-keyframes skillAppear {
+  from { opacity: 0; -webkit-transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; -webkit-transform: translateY(0) scale(1); }
+}
+@keyframes skillAppear {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
