@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="CSS/style.css">
-  <!-- Polices professionnelles : Syne (titres) + DM Sans (corps) -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Merveille J. Nourryssou-Opou — Portfolio BTS SIO SLAM</title>
@@ -12,9 +11,6 @@
 
 <body>
 
-  <!-- =========================================================
-       NAVBAR : navigation fixe, effet scroll, burger mobile
-  ========================================================= -->
   <header class="site-header" id="site-header">
     <nav class="navbar">
       <a href="#hero" class="nav-logo">MJ<span>.</span></a>
@@ -30,10 +26,18 @@
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
 
-      <!-- Burger -->
-      <button class="burger" id="burger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <!-- Bouton mode sombre -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Basculer le mode sombre">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+          <span id="theme-label">Mode sombre</span>
+        </button>
+
+        <!-- Burger -->
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- Drawer mobile -->
@@ -51,15 +55,10 @@
     </div>
   </header>
 
-  <!-- =========================================================
-       HERO : présentation principale
-       UX : accroche claire en < 3 secondes pour le jury
-  ========================================================= -->
+  <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-bg-grid"></div>
-
     <div class="hero-inner">
-      <!-- Bloc texte -->
       <div class="hero-text" data-aos="left">
         <span class="hero-badge">BTS SIO — Option SLAM · 2024 – 2026</span>
         <h1>Merveille Juliana<br><em>Nourryssou-Opou</em></h1>
@@ -68,8 +67,6 @@
           Spécialisée en solutions full-stack : front-end, back-end PHP,
           bases de données MySQL et intégration d'interfaces modernes.
         </p>
-
-        <!-- Métriques rapides — impact immédiat pour le jury -->
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-num">6</span>
@@ -84,7 +81,6 @@
             <span class="stat-label">Technologies maîtrisées</span>
           </div>
         </div>
-
         <div class="hero-actions">
           <a href="NOURRYSSOU-OPOU Merveille Juliana.pdf" class="btn btn-primary" target="_blank">
             <i class="fa-solid fa-download"></i> Télécharger mon CV
@@ -93,19 +89,15 @@
         </div>
       </div>
 
-      <!-- Photo -->
       <div class="hero-photo" data-aos="right">
         <div class="photo-frame">
           <img src="images/moi.jpg" alt="Photo de Merveille Juliana Nourryssou-Opou">
-          <!-- Pastille de disponibilité -->
           <div class="availability-badge">
             <span class="pulse-dot"></span> Disponible en alternance
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Scroll indicator -->
     <div class="scroll-indicator">
       <span>Défiler</span>
       <div class="scroll-line"></div>
@@ -114,10 +106,7 @@
 
   <main>
 
-    <!-- =========================================================
-         PARCOURS : timeline alternée
-         UX : chronologie lisible = jury comprend le parcours vite
-    ========================================================= -->
+    <!-- PARCOURS -->
     <section id="parcours" class="section">
       <div class="section-inner">
         <div class="section-header">
@@ -125,9 +114,7 @@
           <h2>Parcours</h2>
           <p>Ma trajectoire académique vers le développement logiciel.</p>
         </div>
-
         <div class="timeline">
-          <!-- Item 1 -->
           <div class="tl-item tl-right">
             <div class="tl-node"></div>
             <div class="tl-card">
@@ -135,13 +122,9 @@
               <h3>BTS SIO — Option SLAM</h3>
               <p class="tl-org">SCHOLIA, France</p>
               <p>Formation orientée développement web et logiciel : programmation, bases de données, conception d'applications et gestion de projets informatiques.</p>
-              <div class="tl-tags">
-                <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>UML</span>
-              </div>
+              <div class="tl-tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>UML</span></div>
             </div>
           </div>
-
-          <!-- Item 2 -->
           <div class="tl-item tl-left">
             <div class="tl-node"></div>
             <div class="tl-card">
@@ -149,19 +132,14 @@
               <h3>Baccalauréat Scientifique C</h3>
               <p class="tl-org">Lycée Imma-Ngankou, Congo</p>
               <p>Spécialité Mathématiques et Physique — développement du raisonnement logique et analytique, socle fondamental de l'informatique.</p>
-              <div class="tl-tags">
-                <span>Mathématiques</span><span>Physique</span><span>Logique</span>
-              </div>
+              <div class="tl-tags"><span>Mathématiques</span><span>Physique</span><span>Logique</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         FORMATION : SISR vs SLAM comparatif clair
-         UX : jury voit immédiatement pourquoi tu as choisi SLAM
-    ========================================================= -->
+    <!-- FORMATION -->
     <section id="formation" class="section section-alt">
       <div class="section-inner">
         <div class="section-header">
@@ -169,9 +147,7 @@
           <h2>Formation BTS SIO</h2>
           <p>Comprendre les deux options pour mieux situer ma spécialisation.</p>
         </div>
-
         <div class="formation-compare">
-          <!-- SISR -->
           <div class="formation-card">
             <div class="fc-icon"><i class="fa-solid fa-network-wired"></i></div>
             <h3>Option SISR</h3>
@@ -184,8 +160,6 @@
               <li>Supervision infrastructure</li>
             </ul>
           </div>
-
-          <!-- SLAM — choix mis en avant -->
           <div class="formation-card fc-chosen">
             <div class="fc-badge">Mon choix</div>
             <div class="fc-icon"><i class="fa-solid fa-code"></i></div>
@@ -207,10 +181,7 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         COMPÉTENCES : filtrage par catégorie + barres visuelles
-         UX : jury peut scanner les compétences techniques rapidement
-    ========================================================= -->
+    <!-- COMPÉTENCES -->
     <section id="competences" class="section">
       <div class="section-inner">
         <div class="section-header">
@@ -218,8 +189,6 @@
           <h2>Compétences</h2>
           <p>Compétences techniques acquises en formation et en projets réels.</p>
         </div>
-
-        <!-- Tableau de compétences BTS -->
         <div class="competence-pdf-wrap">
           <div class="pdf-label">
             <i class="fa-solid fa-table"></i>
@@ -229,8 +198,6 @@
         </div>
 
         <h3 class="skills-subtitle">Compétences techniques détaillées</h3>
-
-        <!-- Filtres -->
         <div class="skill-filters" role="tablist">
           <button class="sf-btn active" data-filter="all" role="tab">Toutes</button>
           <button class="sf-btn" data-filter="dev" role="tab">Développement</button>
@@ -239,9 +206,7 @@
           <button class="sf-btn" data-filter="pro" role="tab">Compétences pro</button>
         </div>
 
-        <!-- Grille compétences -->
         <div class="skills-grid" id="skills-grid">
-
           <!-- DÉVELOPPEMENT -->
           <div class="skill-card" data-cat="dev">
             <i class="fa-brands fa-html5" style="color:#e34c26"></i>
@@ -249,80 +214,66 @@
             <div class="skill-bar"><div class="skill-fill" style="width:90%;background:#e34c26"></div></div>
             <span>90%</span>
           </div>
-
           <div class="skill-card" data-cat="dev">
             <i class="fa-brands fa-css3-alt" style="color:#264de4"></i>
             <h4>CSS3</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:75%;background:#264de4"></div></div>
             <span>75%</span>
           </div>
-
           <div class="skill-card" data-cat="dev">
             <i class="fa-brands fa-js" style="color:#e8b800"></i>
             <h4>JavaScript</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:50%;background:#e8b800"></div></div>
             <span>50%</span>
           </div>
-
           <div class="skill-card" data-cat="dev">
             <i class="fa-brands fa-php" style="color:#8892be"></i>
             <h4>PHP</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:75%;background:#8892be"></div></div>
             <span>75%</span>
           </div>
-
           <div class="skill-card" data-cat="dev">
             <i class="fa-brands fa-python" style="color:#3776ab"></i>
             <h4>Python</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:35%;background:#3776ab"></div></div>
             <span>35%</span>
           </div>
-
           <div class="skill-card" data-cat="dev">
             <i class="fa-brands fa-java" style="color:#f89820"></i>
             <h4>Java</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:30%;background:#f89820"></div></div>
             <span>30%</span>
           </div>
-
           <div class="skill-card" data-cat="dev">
             <i class="fa-solid fa-wind" style="color:#38bdf8"></i>
             <h4>Tailwind CSS</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:75%;background:#38bdf8"></div></div>
             <span>75%</span>
           </div>
-
-          <!-- Laravel -->
-        <div class="skill-card" data-cat="dev">
-          <i class="fa-brands fa-laravel" style="color:#FF2D20"></i>
-          <h4>Laravel</h4>
-          <div class="skill-bar"><div class="skill-fill" style="width:40%;background:#FF2D20"></div></div>
-          <span>40%</span>
-        </div>
-
-        <!-- React JS -->
-        <div class="skill-card" data-cat="dev">
-          <i class="fa-brands fa-react" style="color:#61DAFB"></i>
-          <h4>React JS</h4>
-          <div class="skill-bar"><div class="skill-fill" style="width:35%;background:#61DAFB"></div></div>
-          <span>35%</span>
-        </div>
-
-        <!-- React Native -->
-        <div class="skill-card" data-cat="dev">
-          <i class="fa-brands fa-react" style="color:#7B68EE"></i>
-          <h4>React Native</h4>
-          <div class="skill-bar"><div class="skill-fill" style="width:30%;background:#7B68EE"></div></div>
-          <span>30%</span>
-        </div>
-
-        <!-- Node.js -->
-        <div class="skill-card" data-cat="dev">
-          <i class="fa-brands fa-node-js" style="color:#339933"></i>
-          <h4>Node.js</h4>
-          <div class="skill-bar"><div class="skill-fill" style="width:30%;background:#339933"></div></div>
-          <span>30%</span>
-        </div>
+          <div class="skill-card" data-cat="dev">
+            <i class="fa-brands fa-laravel" style="color:#FF2D20"></i>
+            <h4>Laravel</h4>
+            <div class="skill-bar"><div class="skill-fill" style="width:40%;background:#FF2D20"></div></div>
+            <span>40%</span>
+          </div>
+          <div class="skill-card" data-cat="dev">
+            <i class="fa-brands fa-react" style="color:#61DAFB"></i>
+            <h4>React JS</h4>
+            <div class="skill-bar"><div class="skill-fill" style="width:35%;background:#61DAFB"></div></div>
+            <span>35%</span>
+          </div>
+          <div class="skill-card" data-cat="dev">
+            <i class="fa-brands fa-react" style="color:#7B68EE"></i>
+            <h4>React Native</h4>
+            <div class="skill-bar"><div class="skill-fill" style="width:30%;background:#7B68EE"></div></div>
+            <span>30%</span>
+          </div>
+          <div class="skill-card" data-cat="dev">
+            <i class="fa-brands fa-node-js" style="color:#339933"></i>
+            <h4>Node.js</h4>
+            <div class="skill-bar"><div class="skill-fill" style="width:30%;background:#339933"></div></div>
+            <span>30%</span>
+          </div>
 
           <!-- BASES DE DONNÉES -->
           <div class="skill-card" data-cat="db">
@@ -331,14 +282,12 @@
             <div class="skill-bar"><div class="skill-fill" style="width:90%;background:#00758f"></div></div>
             <span>90%</span>
           </div>
-
           <div class="skill-card" data-cat="db">
             <i class="fa-solid fa-diagram-project" style="color:#6c63ff"></i>
             <h4>UML</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:50%;background:#6c63ff"></div></div>
             <span>50%</span>
           </div>
-
           <div class="skill-card" data-cat="db">
             <i class="fa-solid fa-sitemap" style="color:#8e44ad"></i>
             <h4>MERISE</h4>
@@ -353,28 +302,24 @@
             <div class="skill-bar"><div class="skill-fill" style="width:95%;background:#007acc"></div></div>
             <span>95%</span>
           </div>
-
           <div class="skill-card" data-cat="tools">
             <i class="fa-solid fa-server" style="color:#fb7a24"></i>
             <h4>XAMPP</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:85%;background:#fb7a24"></div></div>
             <span>85%</span>
           </div>
-
           <div class="skill-card" data-cat="tools">
             <i class="fa-brands fa-github" style="color:#333"></i>
             <h4>GitHub</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:75%;background:#333"></div></div>
             <span>75%</span>
           </div>
-
           <div class="skill-card" data-cat="tools">
             <i class="fa-solid fa-moon" style="color:#2c2255"></i>
             <h4>Eclipse</h4>
             <div class="skill-bar"><div class="skill-fill" style="width:60%;background:#2c2255"></div></div>
             <span>60%</span>
           </div>
-
           <div class="skill-card" data-cat="tools">
             <i class="fa-solid fa-diagram-project" style="color:#f24e1e"></i>
             <h4>Lucidchart</h4>
@@ -388,33 +333,26 @@
             <h4>Analyse des besoins</h4>
             <p>Recueil et formalisation des besoins utilisateurs</p>
           </div>
-
           <div class="skill-card skill-pro" data-cat="pro">
             <i class="fa-solid fa-layer-group"></i>
             <h4>Développement full-stack</h4>
             <p>Conception front-end et back-end en autonomie</p>
           </div>
-
           <div class="skill-card skill-pro" data-cat="pro">
             <i class="fa-solid fa-diagram-project"></i>
             <h4>Gestion de projet</h4>
             <p>Planification, suivi et livraison de projets web</p>
           </div>
-
           <div class="skill-card skill-pro" data-cat="pro">
             <i class="fa-solid fa-users"></i>
             <h4>Travail en équipe</h4>
             <p>Collaboration en environnement professionnel réel</p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         RÉALISATIONS : grille de projets avec détails
-         UX : chaque projet montre compétence + durée + technologies
-    ========================================================= -->
+    <!-- RÉALISATIONS -->
     <section id="realisations" class="section section-alt">
       <div class="section-inner">
         <div class="section-header">
@@ -422,10 +360,8 @@
           <h2>Réalisations</h2>
           <p>Projets réalisés en formation, en stage et en autonomie.</p>
         </div>
-
         <div class="projects-grid">
 
-          <!-- PROJET 1 — AnimAmi (projet phare) -->
           <div class="project-card project-featured">
             <div class="project-img">
               <img src="images/animami.png" alt="AnimAmi Centre Animalier">
@@ -444,23 +380,17 @@
               <h3>AnimAmi Centre Animalier</h3>
               <p>Développement complet du site officiel d'une startup congolaise spécialisée dans les services animaliers. Architecture full-stack avec interface dynamique connectée à une base de données.</p>
               <div class="project-stack">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-                <span>PHP</span><span>MySQL</span><span>Tailwind</span>
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Tailwind</span>
               </div>
             </div>
           </div>
 
-          <!-- PROJET 2 — AGS IT Ciné -->
           <div class="project-card">
             <div class="project-img">
               <img src="images/cine.png" alt="AGS IT Ciné">
               <div class="project-overlay">
-                <a href="#" target="_blank" class="btn btn-sm">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site
-                </a>
-                <a href="#" target="_blank" class="btn btn-sm btn-outline">
-                  <i class="fa-brands fa-github"></i> GitHub
-                </a>
+                <a href="#" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
+                <a href="#" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
               </div>
               <span class="project-type">Stage AGS IT</span>
             </div>
@@ -471,24 +401,16 @@
               </div>
               <h3>AGS IT Ciné</h3>
               <p>Développement en autonomie d'un site cinéma avec interface moderne, pages dédiées par film et contenus dynamiques.</p>
-              <div class="project-stack">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-                <span>PHP</span><span>MySQL</span>
-              </div>
+              <div class="project-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
             </div>
           </div>
 
-          <!-- PROJET 3 — Portfolio -->
           <div class="project-card">
             <div class="project-img">
               <img src="images/portfolio.png" alt="Portfolio">
               <div class="project-overlay">
-                <a href="#" target="_blank" class="btn btn-sm">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site
-                </a>
-                <a href="https://github.com/merveillejul" target="_blank" class="btn btn-sm btn-outline">
-                  <i class="fa-brands fa-github"></i> GitHub
-                </a>
+                <a href="#" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
+                <a href="https://github.com/merveillejul" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
               </div>
               <span class="project-type">Projet personnel</span>
             </div>
@@ -499,20 +421,15 @@
               </div>
               <h3>Portfolio personnel</h3>
               <p>Conception et développement de ce portfolio : interface responsive animée avec attention particulière à l'ergonomie et la performance.</p>
-              <div class="project-stack">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-              </div>
+              <div class="project-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
             </div>
           </div>
 
-          <!-- PROJET 4 — Business Privée -->
           <div class="project-card">
             <div class="project-img">
               <img src="images/busin.png" alt="Business Privée">
               <div class="project-overlay">
-                <a href="#" target="_blank" class="btn btn-sm">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site
-                </a>
+                <a href="#" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
               </div>
               <span class="project-type">Stage Business Privée</span>
             </div>
@@ -523,23 +440,16 @@
               </div>
               <h3>Business Privée — Cabinet de conseil</h3>
               <p>Site vitrine one-page pour cabinet de conseil. Intégration complète, ajustements graphiques et adaptation responsive.</p>
-              <div class="project-stack">
-                <span>HTML5</span><span>CSS3</span>
-              </div>
+              <div class="project-stack"><span>HTML5</span><span>CSS3</span></div>
             </div>
           </div>
 
-          <!-- PROJET 5 — Bolingo ya sucre -->
           <div class="project-card">
             <div class="project-img">
               <img src="images/patiss.png" alt="Bolingo ya sucre">
               <div class="project-overlay">
-                <a href="#" target="_blank" class="btn btn-sm">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site
-                </a>
-                <a href="#" target="_blank" class="btn btn-sm btn-outline">
-                  <i class="fa-brands fa-github"></i> GitHub
-                </a>
+                <a href="#" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
+                <a href="#" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
               </div>
               <span class="project-type">Projet personnel</span>
             </div>
@@ -550,23 +460,16 @@
               </div>
               <h3>Bolingo ya sucre — Pâtisserie</h3>
               <p>Site vitrine d'une pâtisserie : galeries visuelles et design doux mettant en valeur l'univers artisanal.</p>
-              <div class="project-stack">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-              </div>
+              <div class="project-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
             </div>
           </div>
 
-          <!-- PROJET 6 — Agence de Voyage -->
           <div class="project-card">
             <div class="project-img">
               <img src="images/voya.png" alt="Agence de Voyage">
               <div class="project-overlay">
-                <a href="#" target="_blank" class="btn btn-sm">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site
-                </a>
-                <a href="#" target="_blank" class="btn btn-sm btn-outline">
-                  <i class="fa-brands fa-github"></i> GitHub
-                </a>
+                <a href="#" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
+                <a href="#" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
               </div>
               <span class="project-type">Projet formation</span>
             </div>
@@ -577,9 +480,7 @@
               </div>
               <h3>Agence de Voyage</h3>
               <p>Site fictif de voyage : destinations multiples, galeries et navigation dynamique entre les pages.</p>
-              <div class="project-stack">
-                <span>HTML5</span><span>CSS3</span>
-              </div>
+              <div class="project-stack"><span>HTML5</span><span>CSS3</span></div>
             </div>
           </div>
 
@@ -587,10 +488,7 @@
       </div>
     </section>
 
-    <!-- =========================================================
-         EXPÉRIENCES : cartes détaillées avec missions et outils
-         UX : jury voit l'expérience professionnelle réelle clairement
-    ========================================================= -->
+    <!-- EXPÉRIENCES -->
     <section id="experiences" class="section">
       <div class="section-inner">
         <div class="section-header">
@@ -598,10 +496,8 @@
           <h2>Expériences professionnelles</h2>
           <p>Stages réalisés en entreprise pendant ma formation BTS SIO.</p>
         </div>
-
         <div class="exp-list">
 
-          <!-- EXP 1 — AnimAmi -->
           <div class="exp-card">
             <div class="exp-header">
               <div class="exp-icon"><i class="fa-solid fa-paw"></i></div>
@@ -618,13 +514,9 @@
               <li>Conception d'une interface responsive avec animations Tailwind</li>
               <li>Déploiement et mise en ligne du site (animamicanimalier.com)</li>
             </ul>
-            <div class="exp-tech">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-              <span>PHP</span><span>MySQL</span><span>Tailwind</span>
-            </div>
+            <div class="exp-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Tailwind</span></div>
           </div>
 
-          <!-- EXP 2 — AGS IT -->
           <div class="exp-card">
             <div class="exp-header">
               <div class="exp-icon"><i class="fa-solid fa-film"></i></div>
@@ -641,13 +533,9 @@
               <li>Animations et interactions JavaScript avancées</li>
               <li>Intégration de contenus dynamiques en PHP/MySQL</li>
             </ul>
-            <div class="exp-tech">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-              <span>PHP</span><span>MySQL</span>
-            </div>
+            <div class="exp-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
           </div>
 
-          <!-- EXP 3 — Business Privée -->
           <div class="exp-card">
             <div class="exp-header">
               <div class="exp-icon"><i class="fa-solid fa-briefcase"></i></div>
@@ -663,20 +551,14 @@
               <li>Ajustements graphiques et mise en forme</li>
               <li>Adaptation responsive multi-écrans</li>
             </ul>
-            <div class="exp-tech">
-              <span>HTML5</span><span>CSS3</span>
-            </div>
+            <div class="exp-tech"><span>HTML5</span><span>CSS3</span></div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         VEILLE TECHNOLOGIQUE : sujet Cloud & DevOps
-         UX : structurée comme un dossier de veille professionnel
-         IMPORTANT pour l'examen E5 : présenter méthode + résultats
-    ========================================================= -->
+    <!-- VEILLE -->
     <section id="veille" class="section section-alt">
       <div class="section-inner">
         <div class="section-header">
@@ -684,8 +566,6 @@
           <h2>Veille Technologique</h2>
           <p>Suivi régulier des évolutions du domaine Cloud & DevOps.</p>
         </div>
-
-        <!-- Bloc d'introduction structuré -->
         <div class="veille-intro-grid">
           <div class="vi-block">
             <div class="vi-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
@@ -703,8 +583,6 @@
             <p>Consultation hebdomadaire de sources officielles (GitHub Blog, Docker Blog, AWS Blog…), sélection des articles pertinents et synthèse sous forme de fiches.</p>
           </div>
         </div>
-
-        <!-- Sources -->
         <div class="veille-sources">
           <span class="vs-tag">GitHub Blog</span>
           <span class="vs-tag">Docker Blog</span>
@@ -713,139 +591,69 @@
           <span class="vs-tag">Azure Blog</span>
           <span class="vs-tag">HashiCorp Blog</span>
         </div>
-
-        <!-- Fiches de veille -->
         <h3 class="veille-fiches-title">Fiches de veille</h3>
         <div class="veille-grid">
-
           <div class="veille-card">
-            <div class="vc-header">
-              <i class="fa-brands fa-github vc-icon"></i>
-              <span class="vc-source">GitHub Blog · Sept. 2025</span>
-            </div>
+            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">GitHub Blog · Sept. 2025</span></div>
             <h4>Sécurité post-quantique pour SSH</h4>
             <p>GitHub adopte des méthodes d'échange de clés post-quantiques pour renforcer la sécurité SSH face aux ordinateurs quantiques.</p>
-            <div class="vc-tags">
-              <span>SSH</span><span>Post-quantique</span><span>DevSecOps</span>
-            </div>
-            <div class="vc-apport">
-              <strong>Apport BTS :</strong> Comprendre les futures normes de sécurité et sécuriser des environnements Git.
-            </div>
+            <div class="vc-tags"><span>SSH</span><span>Post-quantique</span><span>DevSecOps</span></div>
+            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre les futures normes de sécurité et sécuriser des environnements Git.</div>
           </div>
-
           <div class="veille-card">
-            <div class="vc-header">
-              <i class="fa-brands fa-github vc-icon"></i>
-              <span class="vc-source">GitHub Blog · Mars 2025</span>
-            </div>
+            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">GitHub Blog · Mars 2025</span></div>
             <h4>IssueOps : CI/CD via GitHub Actions</h4>
             <p>IssueOps permet de déclencher des workflows CI/CD directement depuis des issues GitHub, simplifiant la collaboration en équipe.</p>
-            <div class="vc-tags">
-              <span>CI/CD</span><span>GitHub Actions</span><span>DevOps</span>
-            </div>
-            <div class="vc-apport">
-              <strong>Apport BTS :</strong> Comprendre l'automatisation des pipelines de déploiement.
-            </div>
+            <div class="vc-tags"><span>CI/CD</span><span>GitHub Actions</span><span>DevOps</span></div>
+            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre l'automatisation des pipelines de déploiement.</div>
           </div>
-
           <div class="veille-card">
-            <div class="vc-header">
-              <i class="fa-brands fa-docker vc-icon"></i>
-              <span class="vc-source">Docker Blog · Nov. 2025</span>
-            </div>
+            <div class="vc-header"><i class="fa-brands fa-docker vc-icon"></i><span class="vc-source">Docker Blog · Nov. 2025</span></div>
             <h4>Docker Engine v29 — Mise à jour majeure</h4>
-            <p>Nouvelle version avec améliorations en performance, sécurité et gestion des containers. Optimisations notables pour les environnements de production.</p>
-            <div class="vc-tags">
-              <span>Docker</span><span>Conteneurs</span><span>Performance</span>
-            </div>
-            <div class="vc-apport">
-              <strong>Apport BTS :</strong> Maîtriser les environnements conteneurisés modernes.
-            </div>
+            <p>Nouvelle version avec améliorations en performance, sécurité et gestion des containers.</p>
+            <div class="vc-tags"><span>Docker</span><span>Conteneurs</span><span>Performance</span></div>
+            <div class="vc-apport"><strong>Apport BTS :</strong> Maîtriser les environnements conteneurisés modernes.</div>
           </div>
-
           <div class="veille-card">
-            <div class="vc-header">
-              <i class="fa-brands fa-docker vc-icon"></i>
-              <span class="vc-source">Docker Blog · Nov. 2025</span>
-            </div>
+            <div class="vc-header"><i class="fa-brands fa-docker vc-icon"></i><span class="vc-source">Docker Blog · Nov. 2025</span></div>
             <h4>Faille CVE-2025-12735 dans Docker</h4>
             <p>Correction rapide d'une vulnérabilité critique affectant Docker Hardened Images, illustrant l'importance de la supply chain logicielle.</p>
-            <div class="vc-tags">
-              <span>CVE</span><span>Sécurité</span><span>Supply chain</span>
-            </div>
-            <div class="vc-apport">
-              <strong>Apport BTS :</strong> Comprendre la surveillance des vulnérabilités en production.
-            </div>
+            <div class="vc-tags"><span>CVE</span><span>Sécurité</span><span>Supply chain</span></div>
+            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre la surveillance des vulnérabilités en production.</div>
           </div>
-
           <div class="veille-card">
-            <div class="vc-header">
-              <i class="fa-solid fa-network-wired vc-icon"></i>
-              <span class="vc-source">Kubernetes Blog · Avr. 2024</span>
-            </div>
+            <div class="vc-header"><i class="fa-solid fa-network-wired vc-icon"></i><span class="vc-source">Kubernetes Blog · Avr. 2024</span></div>
             <h4>Kubernetes v1.30 — Nouveautés</h4>
-            <p>Nouvelles API stables, gestion de ressources améliorée et sécurité renforcée pour l'orchestration de conteneurs à grande échelle.</p>
-            <div class="vc-tags">
-              <span>Kubernetes</span><span>Cloud</span><span>Orchestration</span>
-            </div>
-            <div class="vc-apport">
-              <strong>Apport BTS :</strong> Suivre l'évolution des standards d'orchestration K8s.
-            </div>
+            <p>Nouvelles API stables, gestion de ressources améliorée et sécurité renforcée pour l'orchestration de conteneurs.</p>
+            <div class="vc-tags"><span>Kubernetes</span><span>Cloud</span><span>Orchestration</span></div>
+            <div class="vc-apport"><strong>Apport BTS :</strong> Suivre l'évolution des standards d'orchestration K8s.</div>
           </div>
-
           <div class="veille-card">
-            <div class="vc-header">
-              <i class="fa-brands fa-aws vc-icon"></i>
-              <span class="vc-source">AWS Blog · Nov. 2025</span>
-            </div>
+            <div class="vc-header"><i class="fa-brands fa-aws vc-icon"></i><span class="vc-source">AWS Blog · Nov. 2025</span></div>
             <h4>Amazon EKS — Workloads améliorés</h4>
-            <p>Amélioration de l'orchestration, de la sécurité et de l'automatisation sur Elastic Kubernetes Service — Kubernetes managé par AWS.</p>
-            <div class="vc-tags">
-              <span>AWS</span><span>EKS</span><span>Kubernetes managé</span>
-            </div>
-            <div class="vc-apport">
-              <strong>Apport BTS :</strong> Comprendre le cloud public et le Kubernetes as a Service.
-            </div>
+            <p>Amélioration de l'orchestration, de la sécurité et de l'automatisation sur Elastic Kubernetes Service.</p>
+            <div class="vc-tags"><span>AWS</span><span>EKS</span><span>Kubernetes managé</span></div>
+            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre le cloud public et le Kubernetes as a Service.</div>
           </div>
-
           <div class="veille-card">
-            <div class="vc-header">
-              <i class="fa-brands fa-microsoft vc-icon"></i>
-              <span class="vc-source">Azure Blog · Nov. 2025</span>
-            </div>
+            <div class="vc-header"><i class="fa-brands fa-microsoft vc-icon"></i><span class="vc-source">Azure Blog · Nov. 2025</span></div>
             <h4>Azure Ultra Disk — Nouvelle génération</h4>
-            <p>Stockage ultra-performant pour applications critiques sur Azure. Latence minimale et débit maximal pour les charges de travail intensives.</p>
-            <div class="vc-tags">
-              <span>Azure</span><span>Stockage</span><span>Infrastructure</span>
-            </div>
-            <div class="vc-apport">
-              <strong>Apport BTS :</strong> Dimensionner des architectures cloud adaptées aux besoins.
-            </div>
+            <p>Stockage ultra-performant pour applications critiques sur Azure. Latence minimale et débit maximal.</p>
+            <div class="vc-tags"><span>Azure</span><span>Stockage</span><span>Infrastructure</span></div>
+            <div class="vc-apport"><strong>Apport BTS :</strong> Dimensionner des architectures cloud adaptées aux besoins.</div>
           </div>
-
           <div class="veille-card">
-            <div class="vc-header">
-              <i class="fa-solid fa-code-branch vc-icon"></i>
-              <span class="vc-source">HashiCorp Blog · Nov. 2025</span>
-            </div>
+            <div class="vc-header"><i class="fa-solid fa-code-branch vc-icon"></i><span class="vc-source">HashiCorp Blog · Nov. 2025</span></div>
             <h4>Terraform — Sécuriser l'infrastructure</h4>
-            <p>Terraform renforce la sécurité grâce à l'Infrastructure as Code et au contrôle d'accès granulaire sur les ressources cloud.</p>
-            <div class="vc-tags">
-              <span>IaC</span><span>Terraform</span><span>Automatisation</span>
-            </div>
-            <div class="vc-apport">
-              <strong>Apport BTS :</strong> Automatiser des infrastructures cloud de manière reproductible.
-            </div>
+            <p>Terraform renforce la sécurité grâce à l'Infrastructure as Code et au contrôle d'accès granulaire.</p>
+            <div class="vc-tags"><span>IaC</span><span>Terraform</span><span>Automatisation</span></div>
+            <div class="vc-apport"><strong>Apport BTS :</strong> Automatiser des infrastructures cloud de manière reproductible.</div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         CONTACT : informations + formulaire EmailJS
-         UX : accès rapide pour le jury ou recruteur
-    ========================================================= -->
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="section-inner">
         <div class="section-header">
@@ -853,51 +661,30 @@
           <h2>Contact</h2>
           <p>Vous souhaitez me contacter ? Je suis disponible par les canaux suivants.</p>
         </div>
-
         <div class="contact-grid">
-          <!-- Infos de contact -->
           <div class="contact-info">
             <h3>Coordonnées</h3>
-
             <a href="mailto:merveillenourryssou@outlook.fr" class="contact-item">
               <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div>
-                <span class="ci-label">Email</span>
-                <span class="ci-value">merveillenourryssou@outlook.fr</span>
-              </div>
+              <div><span class="ci-label">Email</span><span class="ci-value">merveillenourryssou@outlook.fr</span></div>
             </a>
-
             <a href="https://github.com/merveillejul" target="_blank" class="contact-item">
               <div class="ci-icon"><i class="fa-brands fa-github"></i></div>
-              <div>
-                <span class="ci-label">GitHub</span>
-                <span class="ci-value">github.com/merveillejul</span>
-              </div>
+              <div><span class="ci-label">GitHub</span><span class="ci-value">github.com/merveillejul</span></div>
             </a>
-
             <a href="https://www.linkedin.com/in/merveille-juliana-nourryssou-opou-137084332/" target="_blank" class="contact-item">
               <div class="ci-icon"><i class="fa-brands fa-linkedin"></i></div>
-              <div>
-                <span class="ci-label">LinkedIn</span>
-                <span class="ci-value">Merveille Juliana Nourryssou-Opou</span>
-              </div>
+              <div><span class="ci-label">LinkedIn</span><span class="ci-value">Merveille Juliana Nourryssou-Opou</span></div>
             </a>
-
             <div class="contact-item">
               <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <span class="ci-label">Localisation</span>
-                <span class="ci-value">France — Disponible présentiel & distance</span>
-              </div>
+              <div><span class="ci-label">Localisation</span><span class="ci-value">France — Disponible présentiel & distance</span></div>
             </div>
-
-            <!-- CV download répété -->
             <a href="NOURRYSSOU-OPOU Merveille Juliana.pdf" class="btn btn-primary btn-full" target="_blank" style="margin-top:1.5rem">
               <i class="fa-solid fa-download"></i> Télécharger mon CV
             </a>
           </div>
 
-          <!-- Formulaire -->
           <div class="contact-form-wrap">
             <h3>Envoyer un message</h3>
             <form id="contact-form" novalidate>
@@ -919,7 +706,6 @@
                 <label for="user_message">Message</label>
                 <textarea id="user_message" name="user_message" rows="5" placeholder="Votre message..." required></textarea>
               </div>
-              <!-- Honeypot anti-spam -->
               <input type="text" name="website" style="display:none" tabindex="-1">
               <button type="submit" class="btn btn-primary btn-full">
                 <i class="fa-solid fa-paper-plane"></i> Envoyer le message
@@ -932,9 +718,6 @@
 
   </main>
 
-  <!-- =========================================================
-       FOOTER
-  ========================================================= -->
   <footer class="site-footer-bottom">
     <div class="footer-inner">
       <p>© 2026 — Merveille Juliana Nourryssou-Opou · Portfolio BTS SIO SLAM</p>
@@ -946,10 +729,13 @@
     </div>
   </footer>
 
-  <!-- Toast notification -->
   <div id="toast" role="alert" aria-live="polite"></div>
 
-  <!-- EmailJS -->
+  <!-- Bouton retour en haut — FIXE, en dehors du footer -->
+  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="JS/script.js"></script>
 </body>
