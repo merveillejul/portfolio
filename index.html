@@ -564,90 +564,77 @@
         <div class="section-header">
           <span class="section-tag">06</span>
           <h2>Veille Technologique</h2>
-          <p>Suivi régulier des évolutions du domaine Cloud & DevOps.</p>
+          <p>Suivi régulier des évolutions en sécurité web et développement fullstack.</p>
         </div>
         <div class="veille-intro-grid">
           <div class="vi-block">
             <div class="vi-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
             <h3>Définition</h3>
-            <p>La veille technologique est un processus continu de surveillance et d'analyse des évolutions d'un domaine afin d'anticiper les changements et d'adapter ses compétences.</p>
+            <p>La veille technologique est un processus continu de surveillance des évolutions du domaine informatique, permettant d'anticiper les changements et d'adapter ses pratiques de développement.</p>
           </div>
           <div class="vi-block">
-            <div class="vi-icon"><i class="fa-brands fa-docker"></i></div>
+            <div class="vi-icon"><i class="fa-solid fa-shield-halved"></i></div>
             <h3>Mon sujet</h3>
-            <p>Les technologies <strong>Cloud & DevOps</strong> : orchestration de conteneurs, automatisation CI/CD, sécurité des infrastructures et gestion de configuration.</p>
+            <p>La <strong>sécurité des applications web et les nouvelles pratiques de développement fullstack</strong> : frameworks modernes, CI/CD, authentification, protection des données.</p>
           </div>
           <div class="vi-block">
             <div class="vi-icon"><i class="fa-solid fa-rss"></i></div>
             <h3>Méthode</h3>
-            <p>Consultation hebdomadaire de sources officielles (GitHub Blog, Docker Blog, AWS Blog…), sélection des articles pertinents et synthèse sous forme de fiches.</p>
+            <p>Consultation régulière des documentations officielles (Laravel, React, OWASP, CERT-FR), des blogs techniques (Dev.to, MDN Web Docs) et des changelogs GitHub des projets utilisés.</p>
           </div>
         </div>
         <div class="veille-sources">
-          <span class="vs-tag">GitHub Blog</span>
-          <span class="vs-tag">Docker Blog</span>
-          <span class="vs-tag">Kubernetes Blog</span>
-          <span class="vs-tag">AWS Blog</span>
-          <span class="vs-tag">Azure Blog</span>
-          <span class="vs-tag">HashiCorp Blog</span>
+          <span class="vs-tag">OWASP</span>
+          <span class="vs-tag">CERT-FR</span>
+          <span class="vs-tag">MDN Web Docs</span>
+          <span class="vs-tag">Laravel Blog</span>
+          <span class="vs-tag">React Blog</span>
+          <span class="vs-tag">Dev.to</span>
+          <span class="vs-tag">GitHub Changelogs</span>
         </div>
         <h3 class="veille-fiches-title">Fiches de veille</h3>
         <div class="veille-grid">
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">GitHub Blog · Sept. 2025</span></div>
-            <h4>Sécurité post-quantique pour SSH</h4>
-            <p>GitHub adopte des méthodes d'échange de clés post-quantiques pour renforcer la sécurité SSH face aux ordinateurs quantiques.</p>
-            <div class="vc-tags"><span>SSH</span><span>Post-quantique</span><span>DevSecOps</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre les futures normes de sécurité et sécuriser des environnements Git.</div>
+            <div class="vc-header"><i class="fa-solid fa-shield-halved vc-icon"></i><span class="vc-source">OWASP · Sept. 2025</span></div>
+            <h4>OWASP Top 10 — Les failles les plus courantes</h4>
+            <p>L'OWASP recense les 10 vulnérabilités les plus critiques des applications web : injections SQL, authentification défaillante, exposition de données sensibles, XSS...</p>
+            <div class="vc-tags"><span>Sécurité</span><span>SQL Injection</span><span>XSS</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Appliqué dans ProjectFlow (requêtes préparées PDO, hashage bcrypt, headers de sécurité) et le site cinéma AGS-IT.</div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">GitHub Blog · Mars 2025</span></div>
-            <h4>IssueOps : CI/CD via GitHub Actions</h4>
-            <p>IssueOps permet de déclencher des workflows CI/CD directement depuis des issues GitHub, simplifiant la collaboration en équipe.</p>
-            <div class="vc-tags"><span>CI/CD</span><span>GitHub Actions</span><span>DevOps</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre l'automatisation des pipelines de déploiement.</div>
+            <div class="vc-header"><i class="fa-brands fa-laravel vc-icon"></i><span class="vc-source">Laravel Blog · Oct. 2025</span></div>
+            <h4>Laravel Reverb — WebSocket natif pour Laravel</h4>
+            <p>Laravel Reverb est le nouveau serveur WebSocket officiel de Laravel, plus simple à configurer qu'une solution externe comme Pusher. Il permet des communications temps réel directement depuis l'API.</p>
+            <div class="vc-tags"><span>Laravel</span><span>WebSocket</span><span>Temps réel</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Intégré dans ProjectFlow pour les notifications en temps réel entre les membres d'équipe.</div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-docker vc-icon"></i><span class="vc-source">Docker Blog · Nov. 2025</span></div>
-            <h4>Docker Engine v29 — Mise à jour majeure</h4>
-            <p>Nouvelle version avec améliorations en performance, sécurité et gestion des containers.</p>
-            <div class="vc-tags"><span>Docker</span><span>Conteneurs</span><span>Performance</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Maîtriser les environnements conteneurisés modernes.</div>
+            <div class="vc-header"><i class="fa-brands fa-react vc-icon"></i><span class="vc-source">React Blog · Nov. 2025</span></div>
+            <h4>React 19 — Nouvelles fonctionnalités</h4>
+            <p>React 19 améliore le rendu concurrent, introduit les Actions pour gérer les mutations de données, et optimise les performances des composants avec une compilation améliorée.</p>
+            <div class="vc-tags"><span>React</span><span>Front-end</span><span>Performance</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé dans l'interface web de ProjectFlow. Les nouvelles optimisations de React 19 améliorent la fluidité du tableau Kanban.</div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-docker vc-icon"></i><span class="vc-source">Docker Blog · Nov. 2025</span></div>
-            <h4>Faille CVE-2025-12735 dans Docker</h4>
-            <p>Correction rapide d'une vulnérabilité critique affectant Docker Hardened Images, illustrant l'importance de la supply chain logicielle.</p>
-            <div class="vc-tags"><span>CVE</span><span>Sécurité</span><span>Supply chain</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre la surveillance des vulnérabilités en production.</div>
+            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">GitHub Docs · Janv. 2026</span></div>
+            <h4>GitHub Actions — Automatisation CI/CD</h4>
+            <p>GitHub Actions permet d'automatiser les tests et déploiements via des fichiers YAML. Chaque push déclenche un pipeline : tests, build, déploiement. Aucune intervention manuelle sur le serveur.</p>
+            <div class="vc-tags"><span>CI/CD</span><span>GitHub Actions</span><span>Automatisation</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Mis en place sur ProjectFlow (Railway + Vercel) et AnimAmi (déploiement FTP automatique vers Hostinger).</div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-solid fa-network-wired vc-icon"></i><span class="vc-source">Kubernetes Blog · Avr. 2024</span></div>
-            <h4>Kubernetes v1.30 — Nouveautés</h4>
-            <p>Nouvelles API stables, gestion de ressources améliorée et sécurité renforcée pour l'orchestration de conteneurs.</p>
-            <div class="vc-tags"><span>Kubernetes</span><span>Cloud</span><span>Orchestration</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Suivre l'évolution des standards d'orchestration K8s.</div>
+            <div class="vc-header"><i class="fa-solid fa-lock vc-icon"></i><span class="vc-source">Laravel Docs · Déc. 2025</span></div>
+            <h4>Laravel Sanctum — Authentification par token</h4>
+            <p>Sanctum offre une authentification légère par token API pour les SPAs et applications mobiles. Les tokens expirent automatiquement et peuvent être révoqués à tout moment.</p>
+            <div class="vc-tags"><span>Authentification</span><span>API REST</span><span>Token</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé dans l'API ProjectFlow pour sécuriser les routes. Tokens à durée de vie limitée (2h) avec déconnexion automatique.</div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-aws vc-icon"></i><span class="vc-source">AWS Blog · Nov. 2025</span></div>
-            <h4>Amazon EKS — Workloads améliorés</h4>
-            <p>Amélioration de l'orchestration, de la sécurité et de l'automatisation sur Elastic Kubernetes Service.</p>
-            <div class="vc-tags"><span>AWS</span><span>EKS</span><span>Kubernetes managé</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre le cloud public et le Kubernetes as a Service.</div>
-          </div>
-          <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-microsoft vc-icon"></i><span class="vc-source">Azure Blog · Nov. 2025</span></div>
-            <h4>Azure Ultra Disk — Nouvelle génération</h4>
-            <p>Stockage ultra-performant pour applications critiques sur Azure. Latence minimale et débit maximal.</p>
-            <div class="vc-tags"><span>Azure</span><span>Stockage</span><span>Infrastructure</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Dimensionner des architectures cloud adaptées aux besoins.</div>
-          </div>
-          <div class="veille-card">
-            <div class="vc-header"><i class="fa-solid fa-code-branch vc-icon"></i><span class="vc-source">HashiCorp Blog · Nov. 2025</span></div>
-            <h4>Terraform — Sécuriser l'infrastructure</h4>
-            <p>Terraform renforce la sécurité grâce à l'Infrastructure as Code et au contrôle d'accès granulaire.</p>
-            <div class="vc-tags"><span>IaC</span><span>Terraform</span><span>Automatisation</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Automatiser des infrastructures cloud de manière reproductible.</div>
+            <div class="vc-header"><i class="fa-solid fa-mobile-screen vc-icon"></i><span class="vc-source">Expo Docs · Fév. 2026</span></div>
+            <h4>EAS Build — Compilation d'APK sans Android Studio</h4>
+            <p>Expo Application Services (EAS) permet de compiler des applications React Native en APK Android ou IPA iOS directement dans le cloud, sans configurer d'environnement local complexe.</p>
+            <div class="vc-tags"><span>React Native</span><span>Mobile</span><span>Expo</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé pour générer l'APK Android de ProjectFlow Mobile, disponible en téléchargement direct.</div>
           </div>
         </div>
       </div>
