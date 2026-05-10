@@ -595,46 +595,52 @@
         <h3 class="veille-fiches-title">Fiches de veille</h3>
         <div class="veille-grid">
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-solid fa-shield-halved vc-icon"></i><span class="vc-source">OWASP · Sept. 2025</span></div>
-            <h4>OWASP Top 10 — Les failles les plus courantes</h4>
-            <p>L'OWASP recense les 10 vulnérabilités les plus critiques des applications web : injections SQL, authentification défaillante, exposition de données sensibles, XSS...</p>
+            <div class="vc-header"><i class="fa-solid fa-shield-halved vc-icon"></i><span class="vc-source">owasp.org · 6 nov. 2025</span></div>
+            <h4>OWASP Top 10:2025 — Nouvelles catégories de failles</h4>
+            <p>L'OWASP Top 10:2025 actualise la liste des vulnérabilités les plus critiques des applications web, avec deux nouvelles catégories : A03 Software Supply Chain Failures et A10 Mishandling of Exceptional Conditions.</p>
             <div class="vc-tags"><span>Sécurité</span><span>SQL Injection</span><span>XSS</span></div>
-            <div class="vc-apport"><strong>Apport projet :</strong> Appliqué dans ProjectFlow (requêtes préparées PDO, hashage bcrypt, headers de sécurité) et le site cinéma AGS-IT.</div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Appliqué dans ProjectFlow : requêtes préparées PDO (anti-injection), hashage bcrypt, headers de sécurité X-Frame-Options et X-Content-Type-Options.</div>
+            <div class="vc-url"><a href="https://owasp.org/Top10/2025/" target="_blank">owasp.org/Top10/2025/</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-laravel vc-icon"></i><span class="vc-source">Laravel Blog · Oct. 2025</span></div>
-            <h4>Laravel Reverb — WebSocket natif pour Laravel</h4>
-            <p>Laravel Reverb est le nouveau serveur WebSocket officiel de Laravel, plus simple à configurer qu'une solution externe comme Pusher. Il permet des communications temps réel directement depuis l'API.</p>
+            <div class="vc-header"><i class="fa-brands fa-laravel vc-icon"></i><span class="vc-source">reverb.laravel.com · 12 mars 2024</span></div>
+            <h4>Laravel Reverb — Serveur WebSocket officiel Laravel</h4>
+            <p>Lancé avec Laravel 11, Reverb est le serveur WebSocket haute performance et open-source de Laravel. Il remplace les solutions externes comme Pusher pour les communications en temps réel : notifications, chat, tableaux de bord live.</p>
             <div class="vc-tags"><span>Laravel</span><span>WebSocket</span><span>Temps réel</span></div>
-            <div class="vc-apport"><strong>Apport projet :</strong> Intégré dans ProjectFlow pour les notifications en temps réel entre les membres d'équipe.</div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Intégré dans ProjectFlow pour les notifications en temps réel entre membres d'équipe, sans dépendance externe payante.</div>
+            <div class="vc-url"><a href="https://reverb.laravel.com/" target="_blank">reverb.laravel.com</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-react vc-icon"></i><span class="vc-source">React Blog · Nov. 2025</span></div>
-            <h4>React 19 — Nouvelles fonctionnalités</h4>
-            <p>React 19 améliore le rendu concurrent, introduit les Actions pour gérer les mutations de données, et optimise les performances des composants avec une compilation améliorée.</p>
+            <div class="vc-header"><i class="fa-brands fa-react vc-icon"></i><span class="vc-source">react.dev · 5 déc. 2024</span></div>
+            <h4>React v19 — Actions, nouveaux hooks et Server Components</h4>
+            <p>React 19 introduit les Actions pour simplifier les mutations de données, de nouveaux hooks (useActionState, useOptimistic, useFormStatus) et le support natif des React Server Components avec gestion des métadonnées.</p>
             <div class="vc-tags"><span>React</span><span>Front-end</span><span>Performance</span></div>
-            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé dans l'interface web de ProjectFlow. Les nouvelles optimisations de React 19 améliorent la fluidité du tableau Kanban.</div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé dans l'interface web de ProjectFlow. Les Actions React 19 simplifient la gestion des formulaires de création de tâches et projets.</div>
+            <div class="vc-url"><a href="https://react.dev/blog/2024/12/05/react-19" target="_blank">react.dev/blog/2024/12/05/react-19</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">GitHub Docs · Janv. 2026</span></div>
-            <h4>GitHub Actions — Automatisation CI/CD</h4>
-            <p>GitHub Actions permet d'automatiser les tests et déploiements via des fichiers YAML. Chaque push déclenche un pipeline : tests, build, déploiement. Aucune intervention manuelle sur le serveur.</p>
+            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">docs.github.com · janv. 2026</span></div>
+            <h4>GitHub Actions — Automatisation CI/CD par fichiers YAML</h4>
+            <p>GitHub Actions permet d'automatiser les workflows de développement directement dans le dépôt. Les pipelines définis en YAML se déclenchent à chaque push : tests automatiques, build et déploiement sans intervention manuelle.</p>
             <div class="vc-tags"><span>CI/CD</span><span>GitHub Actions</span><span>Automatisation</span></div>
-            <div class="vc-apport"><strong>Apport projet :</strong> Mis en place sur ProjectFlow (Railway + Vercel) et AnimAmi (déploiement FTP automatique vers Hostinger).</div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Configuré sur ProjectFlow (déploiement Railway + Vercel) et AnimAmi (synchronisation FTP automatique vers Hostinger à chaque push).</div>
+            <div class="vc-url"><a href="https://docs.github.com/en/actions" target="_blank">docs.github.com/en/actions</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-solid fa-lock vc-icon"></i><span class="vc-source">Laravel Docs · Déc. 2025</span></div>
-            <h4>Laravel Sanctum — Authentification par token</h4>
-            <p>Sanctum offre une authentification légère par token API pour les SPAs et applications mobiles. Les tokens expirent automatiquement et peuvent être révoqués à tout moment.</p>
+            <div class="vc-header"><i class="fa-solid fa-lock vc-icon"></i><span class="vc-source">laravel.com/docs · janv. 2026</span></div>
+            <h4>Laravel Sanctum — Authentification légère par token API</h4>
+            <p>Sanctum fournit un système d'authentification par token pour les SPAs, applications mobiles et APIs. Chaque utilisateur peut générer plusieurs tokens avec des capacités spécifiques (scopes). Les tokens peuvent être révoqués à tout moment.</p>
             <div class="vc-tags"><span>Authentification</span><span>API REST</span><span>Token</span></div>
-            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé dans l'API ProjectFlow pour sécuriser les routes. Tokens à durée de vie limitée (2h) avec déconnexion automatique.</div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé dans l'API ProjectFlow. Tokens d'une durée de vie de 2h, révocation automatique à la déconnexion, compatible avec l'app web et l'app mobile.</div>
+            <div class="vc-url"><a href="https://laravel.com/docs/13.x/sanctum" target="_blank">laravel.com/docs/sanctum</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-solid fa-mobile-screen vc-icon"></i><span class="vc-source">Expo Docs · Fév. 2026</span></div>
-            <h4>EAS Build — Compilation d'APK sans Android Studio</h4>
-            <p>Expo Application Services (EAS) permet de compiler des applications React Native en APK Android ou IPA iOS directement dans le cloud, sans configurer d'environnement local complexe.</p>
+            <div class="vc-header"><i class="fa-solid fa-mobile-screen vc-icon"></i><span class="vc-source">docs.expo.dev · mars 2026</span></div>
+            <h4>EAS Build — Compilation APK/IPA React Native dans le cloud</h4>
+            <p>EAS (Expo Application Services) Build est un service hébergé qui compile les projets React Native en APK Android ou IPA iOS directement dans le cloud. Il gère automatiquement les certificats de signature et fonctionne sans Android Studio.</p>
             <div class="vc-tags"><span>React Native</span><span>Mobile</span><span>Expo</span></div>
-            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé pour générer l'APK Android de ProjectFlow Mobile, disponible en téléchargement direct.</div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé pour générer l'APK Android de ProjectFlow Mobile. Le fichier APK est disponible en téléchargement direct depuis Expo.</div>
+            <div class="vc-url"><a href="https://docs.expo.dev/build/introduction/" target="_blank">docs.expo.dev/build/introduction</a></div>
           </div>
         </div>
       </div>

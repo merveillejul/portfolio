@@ -1240,6 +1240,17 @@ ul { list-style: none; padding: 0; }
 }
 .vc-apport strong { color: var(--ink); }
 
+.vc-url {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+}
+.vc-url a {
+  color: var(--emerald);
+  text-decoration: none;
+  word-break: break-all;
+}
+.vc-url a:hover { text-decoration: underline; }
+
 /* ============================================================
    CONTACT
 ============================================================ */
