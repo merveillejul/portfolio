@@ -244,3 +244,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 }); // end DOMContentLoaded
+
+/* AOS — Animations au scroll */
+if (typeof AOS !== 'undefined') {
+  AOS.init({
+    duration: 700,
+    once: true,
+    offset: 60,
+    easing: 'ease-out-cubic'
+  });
+}

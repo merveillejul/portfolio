@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="CSS/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <title>Merveille J. Nourryssou-Opou — Portfolio BTS SIO SLAM</title>
 </head>
 
@@ -59,7 +60,7 @@
   <section class="hero" id="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-inner">
-      <div class="hero-text" data-aos="left">
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
         <span class="hero-badge">BTS SIO — Option SLAM · 2024 – 2026</span>
         <h1>Merveille Juliana<br><em>Nourryssou-Opou</em></h1>
         <p class="hero-desc">
@@ -89,7 +90,7 @@
         </div>
       </div>
 
-      <div class="hero-photo" data-aos="right">
+      <div class="hero-photo" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
         <div class="photo-frame">
           <img src="images/moi.jpg" alt="Photo de Merveille Juliana Nourryssou-Opou">
           <div class="availability-badge">
@@ -109,7 +110,7 @@
     <!-- PARCOURS -->
     <section id="parcours" class="section">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">01</span>
           <h2>Parcours</h2>
           <p>Ma trajectoire académique vers le développement logiciel.</p>
@@ -142,7 +143,7 @@
     <!-- FORMATION -->
     <section id="formation" class="section section-alt">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">02</span>
           <h2>Formation BTS SIO</h2>
           <p>Comprendre les deux options pour mieux situer ma spécialisation.</p>
@@ -184,20 +185,12 @@
     <!-- COMPÉTENCES -->
     <section id="competences" class="section">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">03</span>
           <h2>Compétences</h2>
           <p>Compétences techniques acquises en formation et en projets réels.</p>
         </div>
-        <div class="competence-pdf-wrap">
-          <div class="pdf-label">
-            <i class="fa-solid fa-table"></i>
-            Tableau de synthèse des compétences BTS SIO
-          </div>
-          <iframe src="competences.pdf" title="Tableau de compétences BTS SIO SLAM"></iframe>
-        </div>
-
-        <h3 class="skills-subtitle">Compétences techniques détaillées</h3>
+        <h3 class="skills-subtitle" data-aos="fade-up">Compétences techniques détaillées</h3>
         <div class="skill-filters" role="tablist">
           <button class="sf-btn active" data-filter="all" role="tab">Toutes</button>
           <button class="sf-btn" data-filter="dev" role="tab">Développement</button>
@@ -355,12 +348,38 @@
     <!-- RÉALISATIONS -->
     <section id="realisations" class="section section-alt">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">04</span>
           <h2>Réalisations</h2>
           <p>Projets réalisés en formation, en stage et en autonomie.</p>
         </div>
         <div class="projects-grid">
+
+          <div class="project-card project-featured">
+            <div class="project-img" style="background:linear-gradient(135deg,#1a3a5c,#2e6da4)">
+              <img src="images/projectflow.png" alt="ProjectFlow" onerror="this.style.display='none'">
+              <div class="project-overlay">
+                <a href="https://projectflow-web-pink.vercel.app" target="_blank" class="btn btn-sm">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir l'app
+                </a>
+                <a href="https://github.com/merveillejul/projetflow-platform" target="_blank" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+              <span class="project-type">Projet BTS — Fullstack</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span><i class="fa-regular fa-calendar"></i> Janv. – Mars 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 2 mois</span>
+              </div>
+              <h3>ProjectFlow — Gestion de projets collaboratifs</h3>
+              <p>Plateforme fullstack complète : API REST Laravel sécurisée, interface web React avec Kanban et notifications temps réel, application mobile React Native. Déployée en production avec CI/CD automatisé.</p>
+              <div class="project-stack">
+                <span>Laravel 10</span><span>React 19</span><span>React Native</span><span>MySQL</span><span>WebSocket</span><span>CI/CD</span>
+              </div>
+            </div>
+          </div>
 
           <div class="project-card project-featured">
             <div class="project-img">
@@ -409,7 +428,7 @@
             <div class="project-img">
               <img src="images/portfolio.png" alt="Portfolio">
               <div class="project-overlay">
-                <a href=" https://merveillejul.github.io/portfolio/" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
+                <a href="https://merveillejul.github.io/portfolio/" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
                 <a href="https://github.com/merveillejul/portfolio.git" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
               </div>
               <span class="project-type">Projet personnel</span>
@@ -491,7 +510,7 @@
     <!-- EXPÉRIENCES -->
     <section id="experiences" class="section">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">05</span>
           <h2>Expériences professionnelles</h2>
           <p>Stages réalisés en entreprise pendant ma formation BTS SIO.</p>
@@ -561,7 +580,7 @@
     <!-- VEILLE -->
     <section id="veille" class="section section-alt">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">06</span>
           <h2>Veille Technologique</h2>
           <p>Suivi régulier des évolutions en sécurité web et développement fullstack.</p>
@@ -649,7 +668,7 @@
     <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">07</span>
           <h2>Contact</h2>
           <p>Vous souhaitez me contacter ? Je suis disponible par les canaux suivants.</p>
@@ -730,13 +749,7 @@
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="JS/script.js"></script>
 </body>
 </html>
-
-
-
-<!-- cd D:\Portfolio
-git add .
-git commit -m "Mise à jour liens projets"
-git push -->
