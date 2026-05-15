@@ -1,7 +1,6 @@
 /* ============================================================
    SCRIPT.JS — Portfolio Merveille J. Nourryssou-Opou
    BTS SIO SLAM — 2026
-   Compatible : Chrome, Firefox, Safari iOS/macOS
 ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isVisible) {
           card.style.display = "flex";
           card.style.animation = "none";
-          card.offsetHeight; // force reflow
+          card.offsetHeight;
           card.style.animation = "skillAppear 0.4s ease " + (index % 8) * 0.05 + "s both";
         } else {
           card.style.display = "none";
@@ -138,15 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
   window.showToast = showToast;
 
 
-  /* 7. MODE SOMBRE — Safari compatible
-     localStorage peut être bloqué en mode privé sur Safari.
-     On utilise un try/catch pour éviter tout crash.
-  */
+  /* 7. MODE SOMBRE */
   var themeToggle = document.getElementById("theme-toggle");
   var themeIcon   = document.getElementById("theme-icon");
   var themeLabel  = document.getElementById("theme-label");
 
-  // Lire le thème sauvegardé — try/catch pour Safari privé
   var savedTheme = "light";
   try {
     savedTheme = localStorage.getItem("theme") || "light";
@@ -172,7 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Appliquer immédiatement
   applyTheme(savedTheme);
 
   if (themeToggle) {
@@ -182,17 +176,12 @@ document.addEventListener("DOMContentLoaded", () => {
       applyTheme(newTheme);
       try {
         localStorage.setItem("theme", newTheme);
-      } catch(e) {
-        // Safari mode privé : on continue sans sauvegarder
-      }
+      } catch(e) {}
     });
   }
 
 
-  /* 8. BOUTON RETOUR EN HAUT
-     Safari fix : on utilise opacity + visibility au lieu de transform
-     car position:fixed + transform pose problème sur iOS Safari
-  */
+  /* 8. BOUTON RETOUR EN HAUT */
   var backToTop = document.getElementById("back-to-top");
 
   if (backToTop) {
@@ -203,54 +192,47 @@ document.addEventListener("DOMContentLoaded", () => {
         backToTop.classList.remove("visible");
       }
     };
-
     window.addEventListener("scroll", scrollHandler, { passive: true });
-
-    // Vérifier au chargement aussi
     scrollHandler();
-
     backToTop.addEventListener("click", function() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 
 
-  /* 9. ANIMATIONS AU SCROLL (Intersection Observer) */
-  var animTargets = document.querySelectorAll(
-    ".tl-card, .formation-card, .project-card, .exp-card, .veille-card, .vi-block, .contact-item"
-  );
+  /* 9. ✅ AOS INIT — ici dans DOMContentLoaded, après le chargement */
+  AOS.init({
+    duration: 700,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 80
+  });
 
-  if ("IntersectionObserver" in window) {
+
+  /* 10. INTERSECTION OBSERVER
+     ✅ Uniquement pour les skill-cards (gérées par le filtre JS)
+     On retire .tl-card, .project-card etc. car ils sont gérés par AOS
+  */
+  var animTargets = document.querySelectorAll('.skill-card');
+
+  if ('IntersectionObserver' in window) {
     var appearObserver = new IntersectionObserver(
       function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
+            entry.target.classList.add('is-visible');
             appearObserver.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
     );
     animTargets.forEach(function(el) {
-      el.classList.add("will-animate");
+      el.classList.add('will-animate');
       appearObserver.observe(el);
     });
   } else {
-    // Fallback Safari anciens : tout afficher directement
-    animTargets.forEach(function(el) {
-      el.classList.add("is-visible");
-    });
+    animTargets.forEach(function(el) { el.classList.add('is-visible'); });
   }
 
 }); // end DOMContentLoaded
-
-/* AOS — Animations au scroll */
-if (typeof AOS !== 'undefined') {
-  AOS.init({
-    duration: 700,
-    once: true,
-    offset: 60,
-    easing: 'ease-out-cubic'
-  });
-}
