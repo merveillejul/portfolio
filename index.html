@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="CSS/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <title>Merveille J. Nourryssou-Opou — Portfolio BTS SIO SLAM</title>
 </head>
 
@@ -59,7 +60,7 @@
   <section class="hero" id="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-inner">
-      <div class="hero-text" data-aos="left">
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
         <span class="hero-badge">BTS SIO — Option SLAM · 2024 – 2026</span>
         <h1>Merveille Juliana<br><em>Nourryssou-Opou</em></h1>
         <p class="hero-desc">
@@ -89,7 +90,7 @@
         </div>
       </div>
 
-      <div class="hero-photo" data-aos="right">
+      <div class="hero-photo" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
         <div class="photo-frame">
           <img src="images/moi.jpg" alt="Photo de Merveille Juliana Nourryssou-Opou">
           <div class="availability-badge">
@@ -109,7 +110,7 @@
     <!-- PARCOURS -->
     <section id="parcours" class="section">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">01</span>
           <h2>Parcours</h2>
           <p>Ma trajectoire académique vers le développement logiciel.</p>
@@ -142,7 +143,7 @@
     <!-- FORMATION -->
     <section id="formation" class="section section-alt">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">02</span>
           <h2>Formation BTS SIO</h2>
           <p>Comprendre les deux options pour mieux situer ma spécialisation.</p>
@@ -184,20 +185,12 @@
     <!-- COMPÉTENCES -->
     <section id="competences" class="section">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">03</span>
           <h2>Compétences</h2>
           <p>Compétences techniques acquises en formation et en projets réels.</p>
         </div>
-        <div class="competence-pdf-wrap">
-          <div class="pdf-label">
-            <i class="fa-solid fa-table"></i>
-            Tableau de synthèse des compétences BTS SIO
-          </div>
-          <iframe src="competences.pdf" title="Tableau de compétences BTS SIO SLAM"></iframe>
-        </div>
-
-        <h3 class="skills-subtitle">Compétences techniques détaillées</h3>
+        <h3 class="skills-subtitle" data-aos="fade-up">Compétences techniques détaillées</h3>
         <div class="skill-filters" role="tablist">
           <button class="sf-btn active" data-filter="all" role="tab">Toutes</button>
           <button class="sf-btn" data-filter="dev" role="tab">Développement</button>
@@ -355,12 +348,38 @@
     <!-- RÉALISATIONS -->
     <section id="realisations" class="section section-alt">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">04</span>
           <h2>Réalisations</h2>
           <p>Projets réalisés en formation, en stage et en autonomie.</p>
         </div>
         <div class="projects-grid">
+
+          <div class="project-card project-featured">
+            <div class="project-img" style="background:linear-gradient(135deg,#1a3a5c,#2e6da4)">
+              <img src="images/projectflow.png" alt="ProjectFlow" onerror="this.style.display='none'">
+              <div class="project-overlay">
+                <a href="https://projectflow-web-pink.vercel.app" target="_blank" class="btn btn-sm">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir l'app
+                </a>
+                <a href="https://github.com/merveillejul/projetflow-platform" target="_blank" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+              <span class="project-type">Projet BTS — Fullstack</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span><i class="fa-regular fa-calendar"></i> Janv. – Mars 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 2 mois</span>
+              </div>
+              <h3>ProjectFlow — Gestion de projets collaboratifs</h3>
+              <p>Plateforme fullstack complète : API REST Laravel sécurisée, interface web React avec Kanban et notifications temps réel, application mobile React Native. Déployée en production avec CI/CD automatisé.</p>
+              <div class="project-stack">
+                <span>Laravel 10</span><span>React 19</span><span>React Native</span><span>MySQL</span><span>WebSocket</span><span>CI/CD</span>
+              </div>
+            </div>
+          </div>
 
           <div class="project-card project-featured">
             <div class="project-img">
@@ -409,7 +428,7 @@
             <div class="project-img">
               <img src="images/portfolio.png" alt="Portfolio">
               <div class="project-overlay">
-                <a href=" https://merveillejul.github.io/portfolio/" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
+                <a href="https://merveillejul.github.io/portfolio/" class="btn btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
                 <a href="https://github.com/merveillejul/portfolio.git" target="_blank" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
               </div>
               <span class="project-type">Projet personnel</span>
@@ -491,7 +510,7 @@
     <!-- EXPÉRIENCES -->
     <section id="experiences" class="section">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">05</span>
           <h2>Expériences professionnelles</h2>
           <p>Stages réalisés en entreprise pendant ma formation BTS SIO.</p>
@@ -561,93 +580,86 @@
     <!-- VEILLE -->
     <section id="veille" class="section section-alt">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">06</span>
           <h2>Veille Technologique</h2>
-          <p>Suivi régulier des évolutions du domaine Cloud & DevOps.</p>
+          <p>Suivi régulier des évolutions en sécurité web et développement fullstack.</p>
         </div>
         <div class="veille-intro-grid">
           <div class="vi-block">
             <div class="vi-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
             <h3>Définition</h3>
-            <p>La veille technologique est un processus continu de surveillance et d'analyse des évolutions d'un domaine afin d'anticiper les changements et d'adapter ses compétences.</p>
+            <p>La veille technologique est un processus continu de surveillance des évolutions du domaine informatique, permettant d'anticiper les changements et d'adapter ses pratiques de développement.</p>
           </div>
           <div class="vi-block">
-            <div class="vi-icon"><i class="fa-brands fa-docker"></i></div>
+            <div class="vi-icon"><i class="fa-solid fa-shield-halved"></i></div>
             <h3>Mon sujet</h3>
-            <p>Les technologies <strong>Cloud & DevOps</strong> : orchestration de conteneurs, automatisation CI/CD, sécurité des infrastructures et gestion de configuration.</p>
+            <p>La <strong>sécurité des applications web et les nouvelles pratiques de développement fullstack</strong> : frameworks modernes, CI/CD, authentification, protection des données.</p>
           </div>
           <div class="vi-block">
             <div class="vi-icon"><i class="fa-solid fa-rss"></i></div>
             <h3>Méthode</h3>
-            <p>Consultation hebdomadaire de sources officielles (GitHub Blog, Docker Blog, AWS Blog…), sélection des articles pertinents et synthèse sous forme de fiches.</p>
+            <p>Consultation régulière des documentations officielles (Laravel, React, OWASP, CERT-FR), des blogs techniques (Dev.to, MDN Web Docs) et des changelogs GitHub des projets utilisés.</p>
           </div>
         </div>
         <div class="veille-sources">
-          <span class="vs-tag">GitHub Blog</span>
-          <span class="vs-tag">Docker Blog</span>
-          <span class="vs-tag">Kubernetes Blog</span>
-          <span class="vs-tag">AWS Blog</span>
-          <span class="vs-tag">Azure Blog</span>
-          <span class="vs-tag">HashiCorp Blog</span>
+          <span class="vs-tag">OWASP</span>
+          <span class="vs-tag">CERT-FR</span>
+          <span class="vs-tag">MDN Web Docs</span>
+          <span class="vs-tag">Laravel Blog</span>
+          <span class="vs-tag">React Blog</span>
+          <span class="vs-tag">Dev.to</span>
+          <span class="vs-tag">GitHub Changelogs</span>
         </div>
         <h3 class="veille-fiches-title">Fiches de veille</h3>
         <div class="veille-grid">
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">GitHub Blog · Sept. 2025</span></div>
-            <h4>Sécurité post-quantique pour SSH</h4>
-            <p>GitHub adopte des méthodes d'échange de clés post-quantiques pour renforcer la sécurité SSH face aux ordinateurs quantiques.</p>
-            <div class="vc-tags"><span>SSH</span><span>Post-quantique</span><span>DevSecOps</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre les futures normes de sécurité et sécuriser des environnements Git.</div>
+            <div class="vc-header"><i class="fa-solid fa-shield-halved vc-icon"></i><span class="vc-source">owasp.org · 6 nov. 2025</span></div>
+            <h4>OWASP Top 10:2025 — Nouvelles catégories de failles</h4>
+            <p>L'OWASP Top 10:2025 actualise la liste des vulnérabilités les plus critiques des applications web, avec deux nouvelles catégories : A03 Software Supply Chain Failures et A10 Mishandling of Exceptional Conditions.</p>
+            <div class="vc-tags"><span>Sécurité</span><span>SQL Injection</span><span>XSS</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Appliqué dans ProjectFlow : requêtes préparées PDO (anti-injection), hashage bcrypt, headers de sécurité X-Frame-Options et X-Content-Type-Options.</div>
+            <div class="vc-url"><a href="https://owasp.org/Top10/2025/" target="_blank">owasp.org/Top10/2025/</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">GitHub Blog · Mars 2025</span></div>
-            <h4>IssueOps : CI/CD via GitHub Actions</h4>
-            <p>IssueOps permet de déclencher des workflows CI/CD directement depuis des issues GitHub, simplifiant la collaboration en équipe.</p>
-            <div class="vc-tags"><span>CI/CD</span><span>GitHub Actions</span><span>DevOps</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre l'automatisation des pipelines de déploiement.</div>
+            <div class="vc-header"><i class="fa-brands fa-laravel vc-icon"></i><span class="vc-source">reverb.laravel.com · 12 mars 2024</span></div>
+            <h4>Laravel Reverb — Serveur WebSocket officiel Laravel</h4>
+            <p>Lancé avec Laravel 11, Reverb est le serveur WebSocket haute performance et open-source de Laravel. Il remplace les solutions externes comme Pusher pour les communications en temps réel : notifications, chat, tableaux de bord live.</p>
+            <div class="vc-tags"><span>Laravel</span><span>WebSocket</span><span>Temps réel</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Intégré dans ProjectFlow pour les notifications en temps réel entre membres d'équipe, sans dépendance externe payante.</div>
+            <div class="vc-url"><a href="https://reverb.laravel.com/" target="_blank">reverb.laravel.com</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-docker vc-icon"></i><span class="vc-source">Docker Blog · Nov. 2025</span></div>
-            <h4>Docker Engine v29 — Mise à jour majeure</h4>
-            <p>Nouvelle version avec améliorations en performance, sécurité et gestion des containers.</p>
-            <div class="vc-tags"><span>Docker</span><span>Conteneurs</span><span>Performance</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Maîtriser les environnements conteneurisés modernes.</div>
+            <div class="vc-header"><i class="fa-brands fa-react vc-icon"></i><span class="vc-source">react.dev · 5 déc. 2024</span></div>
+            <h4>React v19 — Actions, nouveaux hooks et Server Components</h4>
+            <p>React 19 introduit les Actions pour simplifier les mutations de données, de nouveaux hooks (useActionState, useOptimistic, useFormStatus) et le support natif des React Server Components avec gestion des métadonnées.</p>
+            <div class="vc-tags"><span>React</span><span>Front-end</span><span>Performance</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé dans l'interface web de ProjectFlow. Les Actions React 19 simplifient la gestion des formulaires de création de tâches et projets.</div>
+            <div class="vc-url"><a href="https://react.dev/blog/2024/12/05/react-19" target="_blank">react.dev/blog/2024/12/05/react-19</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-docker vc-icon"></i><span class="vc-source">Docker Blog · Nov. 2025</span></div>
-            <h4>Faille CVE-2025-12735 dans Docker</h4>
-            <p>Correction rapide d'une vulnérabilité critique affectant Docker Hardened Images, illustrant l'importance de la supply chain logicielle.</p>
-            <div class="vc-tags"><span>CVE</span><span>Sécurité</span><span>Supply chain</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre la surveillance des vulnérabilités en production.</div>
+            <div class="vc-header"><i class="fa-brands fa-github vc-icon"></i><span class="vc-source">docs.github.com · janv. 2026</span></div>
+            <h4>GitHub Actions — Automatisation CI/CD par fichiers YAML</h4>
+            <p>GitHub Actions permet d'automatiser les workflows de développement directement dans le dépôt. Les pipelines définis en YAML se déclenchent à chaque push : tests automatiques, build et déploiement sans intervention manuelle.</p>
+            <div class="vc-tags"><span>CI/CD</span><span>GitHub Actions</span><span>Automatisation</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Configuré sur ProjectFlow (déploiement Railway + Vercel) et AnimAmi (synchronisation FTP automatique vers Hostinger à chaque push).</div>
+            <div class="vc-url"><a href="https://docs.github.com/en/actions" target="_blank">docs.github.com/en/actions</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-solid fa-network-wired vc-icon"></i><span class="vc-source">Kubernetes Blog · Avr. 2024</span></div>
-            <h4>Kubernetes v1.30 — Nouveautés</h4>
-            <p>Nouvelles API stables, gestion de ressources améliorée et sécurité renforcée pour l'orchestration de conteneurs.</p>
-            <div class="vc-tags"><span>Kubernetes</span><span>Cloud</span><span>Orchestration</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Suivre l'évolution des standards d'orchestration K8s.</div>
+            <div class="vc-header"><i class="fa-solid fa-lock vc-icon"></i><span class="vc-source">laravel.com/docs · janv. 2026</span></div>
+            <h4>Laravel Sanctum — Authentification légère par token API</h4>
+            <p>Sanctum fournit un système d'authentification par token pour les SPAs, applications mobiles et APIs. Chaque utilisateur peut générer plusieurs tokens avec des capacités spécifiques (scopes). Les tokens peuvent être révoqués à tout moment.</p>
+            <div class="vc-tags"><span>Authentification</span><span>API REST</span><span>Token</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé dans l'API ProjectFlow. Tokens d'une durée de vie de 2h, révocation automatique à la déconnexion, compatible avec l'app web et l'app mobile.</div>
+            <div class="vc-url"><a href="https://laravel.com/docs/13.x/sanctum" target="_blank">laravel.com/docs/sanctum</a></div>
           </div>
           <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-aws vc-icon"></i><span class="vc-source">AWS Blog · Nov. 2025</span></div>
-            <h4>Amazon EKS — Workloads améliorés</h4>
-            <p>Amélioration de l'orchestration, de la sécurité et de l'automatisation sur Elastic Kubernetes Service.</p>
-            <div class="vc-tags"><span>AWS</span><span>EKS</span><span>Kubernetes managé</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Comprendre le cloud public et le Kubernetes as a Service.</div>
-          </div>
-          <div class="veille-card">
-            <div class="vc-header"><i class="fa-brands fa-microsoft vc-icon"></i><span class="vc-source">Azure Blog · Nov. 2025</span></div>
-            <h4>Azure Ultra Disk — Nouvelle génération</h4>
-            <p>Stockage ultra-performant pour applications critiques sur Azure. Latence minimale et débit maximal.</p>
-            <div class="vc-tags"><span>Azure</span><span>Stockage</span><span>Infrastructure</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Dimensionner des architectures cloud adaptées aux besoins.</div>
-          </div>
-          <div class="veille-card">
-            <div class="vc-header"><i class="fa-solid fa-code-branch vc-icon"></i><span class="vc-source">HashiCorp Blog · Nov. 2025</span></div>
-            <h4>Terraform — Sécuriser l'infrastructure</h4>
-            <p>Terraform renforce la sécurité grâce à l'Infrastructure as Code et au contrôle d'accès granulaire.</p>
-            <div class="vc-tags"><span>IaC</span><span>Terraform</span><span>Automatisation</span></div>
-            <div class="vc-apport"><strong>Apport BTS :</strong> Automatiser des infrastructures cloud de manière reproductible.</div>
+            <div class="vc-header"><i class="fa-solid fa-mobile-screen vc-icon"></i><span class="vc-source">docs.expo.dev · mars 2026</span></div>
+            <h4>EAS Build — Compilation APK/IPA React Native dans le cloud</h4>
+            <p>EAS (Expo Application Services) Build est un service hébergé qui compile les projets React Native en APK Android ou IPA iOS directement dans le cloud. Il gère automatiquement les certificats de signature et fonctionne sans Android Studio.</p>
+            <div class="vc-tags"><span>React Native</span><span>Mobile</span><span>Expo</span></div>
+            <div class="vc-apport"><strong>Apport projet :</strong> Utilisé pour générer l'APK Android de ProjectFlow Mobile. Le fichier APK est disponible en téléchargement direct depuis Expo.</div>
+            <div class="vc-url"><a href="https://docs.expo.dev/build/introduction/" target="_blank">docs.expo.dev/build/introduction</a></div>
           </div>
         </div>
       </div>
@@ -656,7 +668,7 @@
     <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="section-inner">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <span class="section-tag">07</span>
           <h2>Contact</h2>
           <p>Vous souhaitez me contacter ? Je suis disponible par les canaux suivants.</p>
@@ -737,13 +749,7 @@
   </button>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="JS/script.js"></script>
 </body>
 </html>
-
-
-
-<!-- cd D:\Portfolio
-git add .
-git commit -m "Mise à jour liens projets"
-git push -->
