@@ -1193,6 +1193,35 @@ body.dark ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 
 }
 
 /* ============================================================
+   HERO PHOTO — FIX DESKTOP
+============================================================ */
+.hero-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.photo-frame {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-frame img {
+  width: min(320px, 100%);
+  height: min(320px, 100%);
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid var(--bg-card);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+/* ============================================================
    RESPONSIVE — TABLETTE
 ============================================================ */
 @media (max-width: 900px) {
@@ -1203,13 +1232,47 @@ body.dark ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 
     grid-template-columns: 1fr;
     text-align: center;
     padding: 3rem 6% 2rem;
-    gap: 2.5rem;
+    gap: 2rem;
   }
-  .hero-photo { order: -1; }
-  .hero-desc { margin-left: auto; margin-right: auto; }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-photo {
+    order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .photo-frame img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .availability-badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-badge { align-self: center; }
+  .hero-desc { margin-left: auto; margin-right: auto; text-align: center; }
   .hero-actions { justify-content: center; }
   .hero-stats { justify-content: center; }
-  .photo-frame img { width: 200px; height: 200px; }
 
   .timeline::before { left: 16px; }
   .tl-item, .tl-right, .tl-left {
@@ -1221,12 +1284,9 @@ body.dark ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 
   .tl-right .tl-tags { justify-content: flex-start; }
 
   .formation-compare { grid-template-columns: 1fr; }
-
   .projects-grid { grid-template-columns: 1fr 1fr; }
   .project-featured { grid-column: span 2; }
-
   .veille-intro-grid { grid-template-columns: 1fr; }
-
   .contact-grid { grid-template-columns: 1fr; }
 }
 
@@ -1236,21 +1296,18 @@ body.dark ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 
 @media (max-width: 600px) {
   .section { padding: 3.5rem 5%; }
 
-  .hero-text h1 { font-size: 2rem; }
+  .hero-text h1 { font-size: 1.8rem; }
   .hero-stats { flex-wrap: wrap; gap: 1rem; }
   .hero-stats .stat { width: calc(50% - 0.5rem); }
 
+  .photo-frame img { width: 150px; height: 150px; }
+
   .projects-grid { grid-template-columns: 1fr; }
   .project-featured { grid-column: span 1; }
-
   .form-row { grid-template-columns: 1fr; }
-
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
-
   .veille-grid { grid-template-columns: 1fr; }
-
   .footer-inner { flex-direction: column; text-align: center; }
-
   .exp-header { flex-direction: column; }
   .exp-period { align-self: flex-start; }
 }
